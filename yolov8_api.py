@@ -49,7 +49,7 @@ def predict_on_image(image_stream):
 
     return detection_infos, detection_img_base64, duration, image
 
-@app.route('/predict', methods=['GET'])
+@app.route('/', methods=['GET'])
 def home():
     return render_template('index.html')
 
