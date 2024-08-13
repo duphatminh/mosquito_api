@@ -84,10 +84,10 @@ def predict():
         last_response = response  # Store the response for later use
 
         return render_template('result.html', original_img_data=original_img_base64, detection_img_data=detection_img_base64)
-
+        #return jsonify(last_response)
     return jsonify({"code": 1, "message": "Invalid file type"})
 
-@app.route('/predict/img/infor', methods=['GET'])
+@app.route('/predict/img/info', methods=['GET'])
 def imginfo():
     global last_response
     return jsonify(last_response)
